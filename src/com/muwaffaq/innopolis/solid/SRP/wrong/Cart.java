@@ -11,11 +11,9 @@ import java.util.List;
  * a class should only have one responsibility
  * it should only have one reason to change
  */
-
 public class Cart {
 
     List<Product> products;
-    double totals;
     String token;
 
     void addToCart(Product product) {
@@ -25,13 +23,11 @@ public class Cart {
     void removeFromCart(Product product) {
         products.remove(product);
     }
+}
 
+class Discount{
+    double totals;
     void applyDiscount(int percentage) {
         totals = totals * percentage;
     }
-
-
 }
-
-
-
